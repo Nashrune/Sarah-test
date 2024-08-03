@@ -22,10 +22,16 @@ function respond(answer) {
             let img = document.createElement('img');
             img.src = src;
             img.style.position = 'absolute'; // Ensure the image is positioned absolutely
-            let imgWidth = 100; // Set a fixed width for positioning calculations
-            let imgHeight = 100; // Set a fixed height for positioning calculations
+            
+            // Set a fixed width and height for the images
+            let imgWidth = 100; // Adjust this value according to your actual image width
+            let imgHeight = 100; // Adjust this value according to your actual image height
+            
             let newTop = Math.random() * (containerRect.height - imgHeight);
             let newLeft = Math.random() * (containerRect.width - imgWidth);
+            
+            img.style.width = imgWidth + 'px'; // Set the image width
+            img.style.height = imgHeight + 'px'; // Set the image height
             img.style.top = newTop + 'px';
             img.style.left = newLeft + 'px';
             responseDiv.appendChild(img);
